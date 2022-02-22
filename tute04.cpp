@@ -27,3 +27,24 @@ int main() {
   std::cout << std::endl;
   return 0;
 }
+long Factorial(int no){
+int r;
+long fac=1;
+for(int r=no;r>=1;r--){
+
+  fac=fac*r;
+}
+return fac;
+}
+
+long nCr(int n, int r){
+int group=n,subgroup=r,diff;
+long fac,Rfac,Ncr;
+
+fac=Factorial(group);
+Rfac=Factorial(subgroup);
+diff=n-r;
+Ncr=fac/(Rfac*Factorial(diff));
+return Ncr;
+
+}
